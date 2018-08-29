@@ -43,7 +43,7 @@ msgstr ""
 
 #: lib/rubyripper/system/dependency.rb:111
 msgid "Your disc tray can not be opened after ripping"
-msgstr ""
+msgstr "Не открывать лоток для диска после копирования"
 
 #: lib/rubyripper/system/dependency.rb:112
 msgid "You won't be able to encode in FLAC."
@@ -129,7 +129,7 @@ msgstr "Дорожка %s отмечена, как DATA-дорожка\n"
 
 #: lib/rubyripper/disc/scanDiscCdparanoia.rb:209
 msgid "ERROR: No audio tracks found!"
-msgstr ""
+msgstr "ОШИБКА: Нет звуковых дорожек"
 
 #: lib/rubyripper/disc/permissionDrive.rb:84
 #, fuzzy
@@ -197,15 +197,15 @@ msgstr "Неизвестный Исполнитель"
 
 #: lib/rubyripper/base.rb:46
 msgid "test"
-msgstr ""
+msgstr "тест"
 
 #: lib/rubyripper/gtk2/gtkSummary.rb:42
 msgid "The rip has succesfully finished.\\nA short summary is shown below."
-msgstr ""
+msgstr "Копирование успешно завершено.\\nКраткое описании показано ниже"
 
 #: lib/rubyripper/gtk2/gtkSummary.rb:45
 msgid "The rip had some problems.\\nA short summary is shown below."
-msgstr ""
+msgstr "При копирование были проблемы.\\nКраткое описании показано ниже"
 
 #: lib/rubyripper/gtk2/gtkSummary.rb:67
 msgid "Open log file"
@@ -259,7 +259,6 @@ msgstr "Год:"
 msgid "Mark disc as various artist"
 msgstr "Сборник (разные исполнители)"
 
-# пояснение от девелопера:
 # Freeze means it won't change. Like ice isn't moving as easily as water ;) It's an
 # expression. You can also read it as "don't changed disc info".
 #: lib/rubyripper/gtk2/gtkDisc.rb:103
@@ -508,7 +507,7 @@ msgstr "Выбор кодека"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:466
 msgid "No settings available"
-msgstr ""
+msgstr "Нет доступных настроек"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:504
 #, fuzzy
@@ -583,7 +582,7 @@ msgstr "Кодеки"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:581
 msgid "Primary metadata provider:"
-msgstr ""
+msgstr "Поставщик первичных метаданных:"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:583
 msgid "Freedb"
@@ -595,11 +594,11 @@ msgstr ""
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:585
 msgid "Don't use a metadata provider"
-msgstr ""
+msgstr "Не использовать поставщика метаданных"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:588
 msgid "Choose your metadata provider"
-msgstr ""
+msgstr "Выберите поставщика метаданных"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:594
 msgid "Always use first freedb hit"
@@ -628,33 +627,33 @@ msgstr "Настройки"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:617
 msgid "Preferred release date:"
-msgstr ""
+msgstr "Предпочтительная дата выпуска:"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:619
 msgid "Preferred year (metadata):"
-msgstr ""
+msgstr "Предпочтительный год (метаданные):"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:623
 msgid "Latest available"
-msgstr ""
+msgstr "Последние доступные"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:624
 msgid "Original"
-msgstr ""
+msgstr "Оригинал"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:625
 msgid "From release"
-msgstr ""
+msgstr "Из выпуска"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:635
 #, fuzzy
 msgid "Musicbrainz options"
-msgstr "Параметры копирования"
+msgstr "Параметры Musicbrainz"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:648
 #: lib/rubyripper/cli/cliPreferences.rb:107
 msgid "Metadata"
-msgstr ""
+msgstr "Метаданные"
 
 #: lib/rubyripper/gtk2/gtkPreferences.rb:655
 msgid "Base directory:"
@@ -761,13 +760,11 @@ msgstr "Другой"
 #: lib/rubyripper/gtk2/shortMessage.rb:33
 #, fuzzy
 msgid "...Scanning drive %s for an audio disc."
-msgstr ""
-"Добро пожаловать в rubyripper %s.\n"
-"Сканирование привода %s на наличие аудиодиска..."
+msgstr "Сканирование привода %s на наличие аудиодиска..."
 
 #: lib/rubyripper/gtk2/shortMessage.rb:37
 msgid "Welcome to rubyripper %s."
-msgstr ""
+msgstr "Добро пожаловать в rubyripper %s."
 
 #: lib/rubyripper/gtk2/shortMessage.rb:46
 #, fuzzy
@@ -783,12 +780,12 @@ msgstr ""
 #: lib/rubyripper/gtk2/shortMessage.rb:50
 #, fuzzy
 msgid "Opening tray of drive %s."
-msgstr "Открытие лотка %s"
+msgstr "Открытие лотка привода %s"
 
 #: lib/rubyripper/gtk2/shortMessage.rb:54
 #, fuzzy
 msgid "Closing tray of the drive."
-msgstr "Открытие лотка %s"
+msgstr "Закрытие лотка привода %s"
 
 #: lib/rubyripper/gtk2/shortMessage.rb:58
 #, fuzzy
@@ -822,7 +819,7 @@ msgstr "Найдено несколько совпадений..."
 
 #: lib/rubyripper/secureRip.rb:131
 msgid "Not enough disk space left! Rip aborted"
-msgstr "Недостаточно места на дискке! Копирование отменено"
+msgstr "Недостаточно места на диске! Копирование отменено"
 
 #: lib/rubyripper/secureRip.rb:141
 msgid "Copy OK"
@@ -830,11 +827,11 @@ msgstr ""
 
 #: lib/rubyripper/secureRip.rb:147
 msgid "Irrecoverable sectors at the following times:"
-msgstr ""
+msgstr "Испорченные сектора в следующие моменты времени"
 
 #: lib/rubyripper/secureRip.rb:150
 msgid "Copy finished"
-msgstr ""
+msgstr "Копирование завершено"
 
 #: lib/rubyripper/secureRip.rb:189
 #, fuzzy
@@ -850,15 +847,15 @@ msgstr "Неверный размер файла! Пробуем ещё раз\n
 
 #: lib/rubyripper/secureRip.rb:239
 msgid "Sector mismatches at the following times, requiring extra trials:"
-msgstr ""
+msgstr "Сектор не отвечает в следующие моменты времени, требуя дополнительных попыток:"
 
 #: lib/rubyripper/secureRip.rb:354
 msgid "The drive is spinning for more than 30 minutes."
-msgstr ""
+msgstr "Привод вращается более 30 минут."
 
 #: lib/rubyripper/secureRip.rb:355
 msgid "Taking a timeout of 2 minutes to protect the hardware."
-msgstr ""
+msgstr "Время ожидания 2 минуты для защиты оборудования."
 
 #: lib/rubyripper/metadata/data.rb:28
 msgid "Unknown"
@@ -876,11 +873,11 @@ msgstr "Аудиодиск в устройстве %s не обнаружен"
 #: lib/rubyripper/errors.rb:26
 #, fuzzy
 msgid "There is no audio disc ready in drive %s."
-msgstr "Аудиодиск в устройстве %s не обнаружен"
+msgstr "В драйвере %s нет готового аудио диска"
 
 #: lib/rubyripper/errors.rb:27
 msgid "%s does not recognize the parameters used."
-msgstr ""
+msgstr "%s не может распознать используемые параметры."
 
 #: lib/rubyripper/errors.rb:28
 msgid "The device %s doesn't exist on your system!"
@@ -893,7 +890,7 @@ msgstr "Выберите хотя бы одну дорожку."
 #: lib/rubyripper/errors.rb:30
 #, fuzzy
 msgid "Please select at least one codec."
-msgstr "Выберите хотя бы одну дорожку."
+msgstr "Выберите хотя бы одну кодек."
 
 #: lib/rubyripper/errors.rb:31
 msgid "No update function found in the user interface"
@@ -922,13 +919,13 @@ msgstr ""
 
 #: lib/rubyripper/errors.rb:43
 msgid "Error"
-msgstr ""
+msgstr "Ошибка"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:47
 #: lib/rubyripper/cli/cliArguments.rb:47 bin/rubyripper_cli:82
 #, fuzzy
 msgid "Rubyripper version %s"
-msgstr "Этот журнал создан RubyRipper версии %s\n"
+msgstr "Rubyripper версия %s\n"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:48
 msgid "\\nWebsite:"
@@ -945,11 +942,11 @@ msgstr "Неизвестный привод"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:58
 msgid "Device"
-msgstr ""
+msgstr "Устройство"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:60
 msgid "Used ripper"
-msgstr ""
+msgstr "Используемый ripper"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:61
 #: lib/rubyripper/rippingInfoAtStart.rb:89
@@ -977,7 +974,7 @@ msgstr ""
 #: lib/rubyripper/rippingInfoAtStart.rb:67
 #: lib/rubyripper/rippingInfoAtStart.rb:68
 msgid "No"
-msgstr ""
+msgstr "Нет"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:68
 msgid "Fill up missing offset samples with silence : %s\\n"
@@ -987,7 +984,7 @@ msgstr ""
 #: lib/rubyripper/rippingInfoAtStart.rb:69
 #, fuzzy
 msgid "Yes"
-msgstr "да"
+msgstr "Да"
 
 #: lib/rubyripper/rippingInfoAtStart.rb:69
 msgid "Null samples used in CRC calculations"
@@ -1659,11 +1656,11 @@ msgstr "н"
 
 #: lib/rubyripper/cli/cliTracklist.rb:42
 msgid "It's not possible to select tracks for image rips"
-msgstr ""
+msgstr "Невозможно выбрать дорожки для копирования "
 
 #: lib/rubyripper/cli/cliTracklist.rb:43
 msgid "Please change your rip preferences first"
-msgstr ""
+msgstr "Пожалуйста, сначала измените настройки копирования"
 
 #: lib/rubyripper/cli/cliTracklist.rb:54
 msgid "TRACK SELECTION"
@@ -1671,11 +1668,11 @@ msgstr ""
 
 #: lib/rubyripper/cli/cliTracklist.rb:60
 msgid "To toggle all tracks on/off"
-msgstr ""
+msgstr "Включение/выключение всех дорожек"
 
 #: lib/rubyripper/cli/cliTracklist.rb:61
 msgid "Back to main menu"
-msgstr ""
+msgstr "Назад в главное меню"
 
 #: lib/rubyripper/cli/cliTracklist.rb:81 lib/rubyripper/cli/cliDisc.rb:168
 #, fuzzy
@@ -1695,9 +1692,8 @@ msgstr "Выбранные дорожки: %s"
 
 #: lib/rubyripper/cli/cliDisc.rb:70
 msgid "Total playtime: %s"
-msgstr ""
+msgstr "Общее время воспроизведения: %s"
 
-# пояснение от девелопера:
 # Freeze means it won't change. Like ice isn't moving as easily as water ;) It's an
 # expression. You can also read it as "don't changed disc info".
 #: lib/rubyripper/cli/cliDisc.rb:97 lib/rubyripper/cli/cliDisc.rb:158
@@ -1726,7 +1722,7 @@ msgstr "3) Редактировать информацию о дорожке"
 
 #: lib/rubyripper/cli/cliDisc.rb:126
 msgid "Return to main menu"
-msgstr ""
+msgstr "Вернуться в главное меню"
 
 #: lib/rubyripper/cli/cliDisc.rb:144
 #, fuzzy
@@ -1735,7 +1731,7 @@ msgstr "ИНФОРМАЦИЯ О ДИСКЕ"
 
 #: lib/rubyripper/cli/cliDisc.rb:147 lib/rubyripper/cli/cliDisc.rb:176
 msgid "Back to metadata menu"
-msgstr ""
+msgstr "Вернуться в меню метаданных"
 
 #: lib/rubyripper/cli/cliDisc.rb:173
 #, fuzzy
@@ -1747,10 +1743,9 @@ msgstr "ДОРОЖКА"
 msgid "Track name:"
 msgstr "Имя пользователя:"
 
-# бляяяя, капец. переводчику +100 )))))
 #: bin/rubyripper_gtk2:95
 msgid "Ehh.. There shouldn't be anything else. WTF?"
-msgstr "Блин... Это ещё что за хуйня?"
+msgstr "Эх .. Там не должно быть ничего другого. Что за чёрт?"
 
 #: bin/rubyripper_gtk2:96
 msgid "Secret modus = %s"
@@ -1775,15 +1770,15 @@ msgstr "Настройки"
 
 #: bin/rubyripper_gtk2:194
 msgid "Scan drive"
-msgstr "Прочитать"
+msgstr "Сканировать дисковод"
 
 #: bin/rubyripper_gtk2:194
 msgid "Rip cd now!"
-msgstr "Копировать!"
+msgstr "Копировать сейчас!"
 
 #: bin/rubyripper_gtk2:274
 msgid "Disc info"
-msgstr "Диск"
+msgstr "Информация о диске"
 
 #: bin/rubyripper_gtk2:339
 msgid "Close tray"
@@ -1791,7 +1786,7 @@ msgstr "Закрыть лоток"
 
 #: bin/rubyripper_gtk2:392 bin/rubyripper_cli:139
 msgid "Please solve the following configuration errors first:"
-msgstr ""
+msgstr "Пожалуйста, устраните следующие ошибки конфигурации:"
 
 #: bin/rubyripper_cli:70
 msgid "Do you want to change your settings? (y/n) : "
@@ -1809,11 +1804,11 @@ msgstr "Настройки"
 
 #: bin/rubyripper_cli:100
 msgid "Scan drive for audio disc"
-msgstr ""
+msgstr "Сканировать дисковод для аудиодиска"
 
 #: bin/rubyripper_cli:101
 msgid "Change metadata"
-msgstr ""
+msgstr "Изменение метаданных"
 
 #: bin/rubyripper_cli:102
 #, fuzzy
@@ -1822,11 +1817,11 @@ msgstr "1) Выбрать дорожки для копирования"
 
 #: bin/rubyripper_cli:103
 msgid "Rip the disc!"
-msgstr ""
+msgstr "Создать копию диска"
 
 #: bin/rubyripper_cli:104
 msgid "Exit rubyripper..."
-msgstr ""
+msgstr "Выход rubyripper..."
 
 #: bin/rubyripper_cli:113
 #, fuzzy
@@ -1835,7 +1830,7 @@ msgstr "Показать текущую версию rubyripper."
 
 #: bin/rubyripper_cli:114
 msgid "Have a nice day!"
-msgstr ""
+msgstr "Хорошего дня!"
 
 #: bin/rubyripper_cli:146
 msgid "Rip is canceled, exiting..."
@@ -1855,7 +1850,7 @@ msgstr "2) Заменить директорию"
 
 #: bin/rubyripper_cli:172
 msgid "3) Cancel the rip and eject the disc"
-msgstr "3) Отменить и извлечь диск"
+msgstr "3) Отменить копирование и извлечь диск"
 
 #: bin/rubyripper_cli:175
 msgid "Please enter the number of your choice: "
@@ -1863,7 +1858,7 @@ msgstr "Укажите номер пункта: "
 
 #, fuzzy
 #~ msgid "Trackname"
-#~ msgstr "Имя пользователя:"
+#~ msgstr "Название трека:"
 
 #~ msgid "Flac"
 #~ msgstr "Flac"
