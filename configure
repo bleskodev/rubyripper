@@ -203,6 +203,14 @@ $LANG.each do |lang|
   makefile.puts "\trm -f $(prefix)$(DESTDIR)$(LOCALE)/#{lang}/LC_MESSAGES/rubyripper.mo"
 end
 makefile.puts ""
+makefile.puts "flatpak-update-gems:"
+makefile.puts "\truby flatpak/flatpak-builder-tools/rubygems/flatpak_rubygems_generator.rb -s rubygems-gemfile.json -o flatpak/rubygems.json"
+
+makefile.puts ""
+makefile.puts "flatpak-build:"
+makefile.puts "\tcd flatpak; flatpak-builder --force-clean _build io.github.RubyRipper.yaml"
+
+makefile.puts ""
 makefile.puts "clean:"
 makefile.puts "\trm -rf locale/"
 $LANG.each do |lang|
