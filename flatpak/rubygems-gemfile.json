@@ -1,0 +1,8 @@
+[{
+  "type": "file",
+  "path": "../Gemfile"
+},
+{
+  "type": "file",
+  "path": "../Gemfile.lock"
+}]

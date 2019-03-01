@@ -1,0 +1,3 @@
+vendor/
+flatpak/.flatpak-builder
+flatpak/_build
