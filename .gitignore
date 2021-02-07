@@ -1,0 +1,4 @@
+Makefile
+vendor/
+.flatpak-builder
+flatpak/_build

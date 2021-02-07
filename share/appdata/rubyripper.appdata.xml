@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+ <id>rubyripper.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0+</project_license>
+  <name>Rubyripper</name>
+  <summary>Secure Audio Disc Ripper</summary>
+  <description>
+  <p>
+    Rubyripper aims to deliver high quality rips from audio cd's to your computer
+    drive. It tries to do so by ripping the same track with cdparanoia multiple
+    times and then comparing the results. It currently has a gtk2 and a command-
+    line interface.
+  </p>
+  </description>
+  <url type="homepage">https://github.com/bleskodev/rubyripper/</url>
+  <content_rating type="oars-1.1" />
+</component>

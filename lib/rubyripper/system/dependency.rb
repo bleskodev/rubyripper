@@ -23,20 +23,20 @@ class Dependency
   include Singleton unless $run_specs
   include GetText
   GetText.bindtextdomain("rubyripper")
-  def self._(txt) ; GetText._(txt) ; end 
-  
+  def self._(txt) ; GetText._(txt) ; end
+
   attr_reader :platform
-  
+
   def initialize(file=nil, platform=nil)
     @platform = platform ? platform : RUBY_PLATFORM
     @file = file ? file : File
   end
-  
+
   # should be triggered by any user interface
   def startupCheck
     checkForcedDeps()
   end
-  
+
   def eject(cdrom)
     Thread.new do
       @exec = Execute.new
@@ -44,13 +44,13 @@ class Dependency
         @exec.launch("eject #{cdrom}")
       #Mac users have diskutil instead of eject
       elsif installed?('diskutil')
-        @exec.launch("diskutil eject #{cdrom}") 
+        @exec.launch("diskutil eject #{cdrom}")
       else
         puts _("WARNING: No eject utility found!")
       end
     end
   end
-  
+
   # opposite of eject
   def closeTray(cdrom)
     if installed?('eject')
@@ -76,7 +76,7 @@ class Dependency
   def env(var)
     return ENV[var]
   end
-  
+
   # an array with dirs in which binary files are launchable
   def path ; ENV['PATH'].split(':') + ['.'] ; end
 
@@ -167,6 +167,8 @@ calculation unless %s is installed.") % ['Discid'],
     begin
       require 'gtk2'
       return true
+    rescue Gtk::InitError
+      return true
     rescue LoadError
       return false
     end
@@ -250,21 +252,21 @@ calculation unless %s is installed.") % ['Discid'],
   # determine default drive
   def getCdrom #default values for cdrom drives under differenty os'es
     case platform
-      when /freebsd/ then drive = getFreebsdDrive()        
+      when /freebsd/ then drive = getFreebsdDrive()
       when /openbsd/ then drive = '/dev/cd0c' # as provided in issue 324
       when /linux|bsd/ then drive = getLinuxDrive()
       when /darwin/ then drive = '/dev/disk1'
     end
-    
+
     return drive ? drive : 'unknown'
   end
-  
+
   def getFreebsdDrive
     (0..9).each{|num| return "/dev/cd#{num}" if @file.exist?("/dev/cd#{num}")}
     (0..9).each{|num| return "/dev/acd#{num}" if @file.exist?("/dev/acd#{num}")}
     return false
   end
-  
+
   def getLinuxDrive
     return '/dev/cdrom' if @file.exist?('/dev/cdrom')
     return '/dev/dvdrom' if @file.exist?('/dev/dvdrom')

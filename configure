@@ -38,6 +38,7 @@ $BINDIR='/bin'
 $LOCALE='/share/locale'
 $ICONDIR='/share/icons/hicolor/128x128/apps'
 $DESKTOP='/share/applications'
+$APPDATA='/share/appdata'
 $RUBYDIR= '/lib/rubyripper'
 
 if RUBY_PLATFORM.include?('darwin')
@@ -157,6 +158,7 @@ makefile.puts "BINDIR=#{$PREFIX}#{$BINDIR}"
 makefile.puts "LOCALE=#{$PREFIX}#{$LOCALE}"
 makefile.puts "ICONDIR=#{$PREFIX}#{$ICONDIR}"
 makefile.puts "DESKTOP=#{$PREFIX}#{$DESKTOP}"
+makefile.puts "APPDATA=#{$PREFIX}#{$APPDATA}"
 makefile.puts "RUBYDIR=#{$PREFIX}#{$RUBYDIR}"
 makefile.puts ""
 makefile.puts "all:"
@@ -171,6 +173,7 @@ if $GTK2
   makefile.puts "\t#{$INSTALL} -m 755 bin/rubyripper_gtk2 $(prefix)$(DESTDIR)$(BINDIR)/rrip_gui"
   makefile.puts "\t#{$INSTALL} -m 644 #{$ICONDIR[1..-1]}/rubyripper.png $(prefix)$(DESTDIR)$(ICONDIR)/rubyripper.png"
   makefile.puts "\t#{$INSTALL} -m 644 #{$DESKTOP[1..-1]}/rubyripper.desktop $(prefix)$(DESTDIR)$(DESKTOP)/rubyripper.desktop"
+  makefile.puts "\t#{$INSTALL} -m 644 #{$APPDATA[1..-1]}/rubyripper.appdata.xml $(prefix)$(DESTDIR)$(DESKTOP)/rubyripper.appdata.xml"
 end
 
 if $CLI
@@ -200,6 +203,14 @@ $LANG.each do |lang|
   makefile.puts "\trm -f $(prefix)$(DESTDIR)$(LOCALE)/#{lang}/LC_MESSAGES/rubyripper.mo"
 end
 makefile.puts ""
+makefile.puts "flatpak-update-gems:"
+makefile.puts "\truby flatpak/flatpak-builder-tools/rubygems/flatpak_rubygems_generator.rb -s rubygems-gemfile.json -o flatpak/rubygems.json"
+
+makefile.puts ""
+makefile.puts "flatpak-build:"
+makefile.puts "\tcd flatpak; flatpak-builder --force-clean _build io.github.RubyRipper.yaml"
+
+makefile.puts ""
 makefile.puts "clean:"
 makefile.puts "\trm -rf locale/"
 $LANG.each do |lang|
@@ -218,6 +229,7 @@ puts "* Executables: #{$PREFIX}#{$BINDIR}"
 puts "* Localization files: #{$PREFIX}#{$LOCALE}"
 puts "* Icon file: #{$PREFIX}#{$ICONDIR}"
 puts "* Desktop file: #{$PREFIX}#{$DESKTOP}"
+puts "* Appdata file: #{$PREFIX}#{$APPDATA}"
 puts "* Library files: #{$PREFIX}#{$RUBYDIR}"
 puts ""
 
