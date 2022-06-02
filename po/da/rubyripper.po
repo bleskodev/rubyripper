@@ -1446,7 +1446,7 @@ msgstr "Filstørrelse er ikke korrekt! Forsøger igen"
 msgid "Sector mismatches at the following times, requiring extra trials:"
 msgstr "Sektor var forskellig på de følgende tidspunkter, kræver ekstra forsøg:"
 
-msgid "The drive is spinning for more than 30 minutes."
+msgid "Drive has been spinning for more than 30 minutes."
 msgstr "Drevet har rotereret i mere end 30 minutter."
 
 msgid "Taking a timeout of 2 minutes to protect the hardware."

@@ -1508,7 +1508,7 @@ msgid "Sector mismatches at the following times, requiring extra trials:"
 msgstr ""
 
 #, fuzzy
-msgid "The drive is spinning for more than 30 minutes."
+msgid "Drive has been spinning for more than 30 minutes."
 msgstr ""
 "Enheten snurrar i mer än 30 minuter.\n"
 

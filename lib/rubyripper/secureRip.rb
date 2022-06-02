@@ -361,7 +361,7 @@ is #{@disc.getFileSize(track)} bytes." if @prefs.debug
     puts "DEBUG: Minutes ripping is #{(Time.now - @timeStarted) / 60}." if @prefs.debug
 
     if (((Time.now - @timeStarted) / 60) > 30 && @prefs.maxThreads != 0)
-      puts _("The drive is spinning for more than 30 minutes.")
+      puts _("Drive has been spinning for more than 30 minutes.")
       puts _("Taking a timeout of 2 minutes to protect the hardware.")
       sleep(120)
       @timeStarted = Time.now # reset time
