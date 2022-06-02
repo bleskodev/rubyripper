@@ -1386,7 +1386,7 @@ msgstr ""
 "Non-concordance des secteurs aux positions suivantes, essais supplémentaires r"
 "equis :"
 
-msgid "The drive is spinning for more than 30 minutes."
+msgid "Drive has been spinning for more than 30 minutes."
 msgstr "Le lecteur tourne depuis plus de 30 minutes."
 
 msgid "Taking a timeout of 2 minutes to protect the hardware."

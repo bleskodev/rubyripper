@@ -1495,7 +1495,7 @@ msgstr ""
 msgid "Sector mismatches at the following times, requiring extra trials:"
 msgstr ""
 
-msgid "The drive is spinning for more than 30 minutes."
+msgid "Drive has been spinning for more than 30 minutes."
 msgstr ""
 
 msgid "Taking a timeout of 2 minutes to protect the hardware."
