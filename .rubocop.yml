@@ -1,0 +1,2 @@
+Style/GlobalVars:
+  AllowedVariables: [$rr_version, $rr_url]
