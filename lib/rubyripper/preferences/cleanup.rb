@@ -35,8 +35,8 @@ module Preferences
       if @data.metadataProvider == 'freedb'
         @data.metadataProvider = 'gnudb'
       end
-      if @data.site.include? 'freedb'
-        @data.site.gsub!('freedb', 'gnudb')
+      if @data.site.include? 'freedb.freedb.org'
+        @data.site.gsub!('freedb.freedb.org', 'gnudb.gnudb.org')
       end
     end
 
