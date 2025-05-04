@@ -168,15 +168,11 @@ private
       varArtist[track.elements['position'].text.to_i] = artist
     end
     # extraDiscInfo => [Depends.  What do you want?]
-    # Do we actually have a various artists disc?
+    
+    # Even if there is only one album artist, the songs may have different artists.
+    # If the song has multiple artists, use that one.
     if varArtist.values.uniq.length > 1
-      # Modulate our enthusiasm.  Just so we don't get tricked by
-      # things like the 30th Anniversary Edition of Ziggy Stardust
-      # (where the second disc will have two distinct artists, but the
-      # album as a whole should still be credited to David Bowie)
-      if numArtists > 1 or variousArtists
-        @md.varArtist = varArtist
-      end
+      @md.varArtist = varArtist
     end
   end
 end
