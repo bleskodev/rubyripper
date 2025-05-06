@@ -133,6 +133,21 @@ private
     if @musicbrainzRelease.elements['title'] and @musicbrainzRelease.elements['title'].text
       @md.album = @musicbrainzRelease.elements['title'].text
     end
+    # If the album has multiple discs, add the disc number and the disc title to the album title.
+    if REXML::XPath::match(@musicbrainzRelease, "medium-list/medium", {'' => MMD_NAMESPACE}).size > 1 and @musicbrainzRelease.elements["medium-list/medium/disc-list/disc[@id='#{@musicbrainzDiscid}']/../.."]
+      medium = @musicbrainzRelease.elements["medium-list/medium/disc-list/disc[@id='#{@musicbrainzDiscid}']/../.."]
+      disc = " [DISC"
+      if medium.elements['position'] and medium.elements['position'].text
+        disc << medium.elements['position'].text
+      end
+      if medium.elements['title'] and medium.elements['title'].text
+        disc << " : "
+        disc << medium.elements['title'].text
+      end
+      disc << "]"
+      @md.album << disc 
+    end
+
     # For now, only allow the year.
     if @prefs.useEarliestDate and @musicbrainzRelease.elements['release-group/first-release-date'] and @musicbrainzRelease.elements['release-group/first-release-date'].text
       # inc=release-groups gives us the earliest date for free!
