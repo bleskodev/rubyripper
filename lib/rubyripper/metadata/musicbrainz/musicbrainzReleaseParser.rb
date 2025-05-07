@@ -164,7 +164,7 @@ private
         # ' / ' is default separator
         artist << (credit.attributes['joinphrase'] || ' / ')
       end
-      artist = artist[0..-4]
+      artist = artist[0..-4] if artist.end_with?(' / ')
       varArtist[track.elements['position'].text.to_i] = artist
     end
     # extraDiscInfo => [Depends.  What do you want?]
