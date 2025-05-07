@@ -81,12 +81,12 @@ class SecureRip
   # Due to a bug in cdparanoia the -Z setting has to be replaced for last track.
   # This is only needed when an offset is set. See issue nr. 13.
   def checkParanoiaSettings(track=nil)
-    if @prefs.rippersettings.include?('-Z') && @prefs.offset != 0
-      if @prefs.image || track == @disc.audiotracks
-        @rippersettingsBak = @prefs.rippersettings.dup()
-        @prefs.rippersettings.gsub!(/-Z\s?/, '')
-      end
-    end
+    # if @prefs.rippersettings.include?('-Z') && @prefs.offset != 0
+    #   if @prefs.image || track == @disc.audiotracks
+    #     @rippersettingsBak = @prefs.rippersettings.dup()
+    #     @prefs.rippersettings.gsub!(/-Z\s?/, '')
+    #   end
+    # end
   end
 
   # restore cdparanoia settings potentialy fixed up in checkParanoiaSettings
