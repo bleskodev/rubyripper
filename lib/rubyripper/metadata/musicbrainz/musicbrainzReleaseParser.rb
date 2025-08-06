@@ -129,7 +129,7 @@ private
         variousArtists = true
       end
     end
-    @md.artist = @md.artist[0..-4]
+    @md.artist = @md.artist[0..-4] if @md.artist.end_with?(' / ')
     if @musicbrainzRelease.elements['title'] and @musicbrainzRelease.elements['title'].text
       @md.album = @musicbrainzRelease.elements['title'].text
     end
