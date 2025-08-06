@@ -129,7 +129,7 @@ private
         variousArtists = true
       end
     end
-    @md.artist = @md.artist[0..-4]
+    @md.artist = @md.artist[0..-4] if @md.artist.end_with?(' / ')
     if @musicbrainzRelease.elements['title'] and @musicbrainzRelease.elements['title'].text
       @md.album = @musicbrainzRelease.elements['title'].text
     end
@@ -164,7 +164,7 @@ private
         # ' / ' is default separator
         artist << (credit.attributes['joinphrase'] || ' / ')
       end
-      artist = artist[0..-4]
+      artist = artist[0..-4] if artist.end_with?(' / ')
       varArtist[track.elements['position'].text.to_i] = artist
     end
     # extraDiscInfo => [Depends.  What do you want?]
