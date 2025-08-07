@@ -87,7 +87,7 @@ class FileScheme
 
   # return the toc file of Cdrdao class // TODO this can't be; the dir is not yet created.
   def getTocFile
-    File.join(getTempDir(), @filterFiles.filter("#{@md.artist} - #{@md.album}.toc"))
+    File.join(getTempDir(), @filterFiles.filter("#{giveFileName()}.toc"))
   end
 
   # return the full filename of the log
@@ -97,7 +97,7 @@ class FileScheme
 
   # return the full filename of the cuesheet
   def getCueFile(codec)
-    File.join(@dir[codec], @filterFiles.filter("#{@md.artist} - #{@md.album} (#{codec}).cue"))
+    File.join(@dir[codec], @filterFiles.filter("#{giveFileName()}.cue"))
   end
 
   # return the just ripped wave file
@@ -235,7 +235,7 @@ class FileScheme
   end
 
   # give the filename for given codec and track
-  def giveFileName(codec, track=0)
+  def giveFileName(codec="", track=0)
     file = File.basename(@fileScheme)
 
     # the artist should always refer to the artist that is valid for the track
@@ -269,6 +269,7 @@ class FileScheme
       when 'wavpack' then '.wv'
       when 'opus' then '.opus'
       when 'other' then @otherExtension
+      when '' then ''
     end
   end
 
