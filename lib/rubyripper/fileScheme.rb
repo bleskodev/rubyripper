@@ -163,11 +163,6 @@ class FileScheme
         puts "This is automatically removed"
       end
 
-      if @fileScheme.include?('%a') && @md.various?
-        @fileScheme.gsub!('%a', '%va')
-        puts "Replacing '%a' with '%va': ripping a various artist disc in image mode"
-      end
-
       if @fileScheme.include?('%t')
         @fileScheme.gsub!('%t', '')
         puts "Warning: '%t' in the filescheme for image rips makes no sense!"
